@@ -1,0 +1,218 @@
+# Array
+
+Arrays are one of the mostly used data structures in JavaScript. quarkle supports arrays of numbers, strings, binary variables and objects. Following operations are supported on `array` data type.
+
+## Array Product
+
+Returns the product of all the numbers in the array.
+
+**Usage**
+
+```js copy
+arrayProduct([2, 3, 6, 34, 90, 1]); // Returns 110160
+arrayProduct([90, 87, 0, -34, -900, -1245]); // Returns 0
+```
+
+**Returns**
+
+Returns the product of all the numbers in the array.
+
+## Mean
+
+Returns the mean of the given array. quarkle supports 4 types of mean, `arithmetic`, `geometric`, `harmonic`, `rms`. The default value is `arithmetic`.
+
+**Usage**
+
+```js copy
+mean([3, 5, 9, 5, 7, 2]); // Performs arithmetic mean, returns 5.17
+mean([4, 10, 16, 24], "geometric"); // Returns 11.13
+mean([10, 2, 4, 7], "harmonic"); // Returns 4.03
+mean([2, 3, 5, 7, 11], "rms"); // Returns 6.45
+```
+
+**Arguments**
+
+- `list`: Arary of numbers.
+- `type` (*optional*): Mean type, supported types are `arithmetic`, `geometric`, `harmonic`, `rms`, Default type is `arithmetic`.
+
+**Returns**
+
+Returns the mean of the list.
+
+## Median
+
+Returns the median of the given array. Median is the middle number in the sorted array. Sorting is performed internally by the quarkle.
+
+**Usage**
+
+```js copy
+median([142, 140, 130, 150, 160, 135, 158, 132]); // Returns 141
+median([4, 12, 14, 17, 22, 23, 23, 24, 25, 29, 40, 67, 77, 82, 92]); // Returns 24
+```
+
+**Returns**
+
+Returns the median of the list.
+
+## Mode
+
+Returns the mode of the given list. Mode is the value that appears most frequently within that list. If multiple numbers have the same highest frequency, it will return an array of mode values.
+
+**Usage**
+
+```js copy
+mode([3, 3, 6, 9, 16, 16, 16, 27, 27, 37, 48]); // Returns  16
+mode([3, 3, 3, 9, 16, 16, 16, 27, 37, 48]); // Returns [3, 16]
+```
+
+**Returns**
+
+Returns the mode of the list.
+
+## Root Mean Square
+
+Calculates the RMS (Root Mean Square) of the list. RMS is the square root of the mean square.
+
+**Usage**
+
+```js copy
+rootMeanSquare([1, 2, 3, 4, 5]); // Returns 3.32
+rootMeanSquare([4, 6, 8, 10]); // Returns 7.35
+```
+
+**Returns**
+
+Returns the Root Mean Square (RMS) of the list.
+
+## Variance
+
+Variance is a measure of the spread of data within the list.
+
+**Usage**
+
+```js copy
+variance([46, 69, 32, 60, 52, 41]); // Returns 177.2
+variance([4, 2, 5, 8, 6]); // Returns 5
+```
+
+**Returns**
+
+Returns the variance of the list.
+
+## Standard Deviation
+
+Standard Deviation is the square root of `variance`.
+
+**Usage**
+
+```js copy
+standardDeviation([46, 69, 32, 60, 52, 41]); // Returns 13.31
+standardDeviation([4, 2, 5, 8, 6]); // Returns 2.24
+```
+
+**Returns**
+
+Returns the standard deviation of the list.
+
+## Remove Duplicates
+
+Removes duplicates from the list and return the same list.
+
+**Usage**
+
+```js copy
+removeDuplicates([1, 2, 3, 3, 2, 1, 4, 5, 1, 5, 8, 3]); // Returns [1, 2, 3, 4, 5, 8]
+removeDuplicates([52, 56, 41, 98, 52, 41, 109, 254]); // Returns [52, 56, 41, 98, 109, 254]
+```
+
+**Returns**
+
+Same list with duplicates removed
+
+## Histogram
+
+Returns the histogram map for each item occurrence in a given list.
+
+**Usage**
+
+```js copy
+histogram([3, 3, 3, 9, 16, 16, 16, 27, 37, 48]); // Returns {"3": 3, "9": 1, "16": 3, "27": 1, "37": 1, "48": 1}
+```
+
+**Returns**
+
+Histogram map for a given list.
+
+## Greatest Common Divisor (GCD)
+
+Returns the Greatest Common Divisor (GCD) of the list.
+
+**Usage**
+
+```js copy
+gcd([8, 12, 16]); // Returns 4
+gcd([13, 17, 48, 91]); // Returns 1
+gcd([]); // Returns 0
+```
+
+**Returns**
+
+Returns Greatest Common Divisor (GCD) of the list.
+
+## Least Common Multiple (LCM)
+
+Returns the Least Common Multiple (LCM) of the list.
+
+**Usage**
+
+```js copy
+lcm([12, 18, 24]); // Returns 72
+lcm([10, 12, 15, 75]); // Returns 300
+lcm([]); // Returns 0
+```
+
+**Returns**
+
+Returns Least Common Multiple (LCM) of the list.
+
+## Matrix Addition
+
+Adds two matrices and will return the result. The order of both matrices must be same for addition.
+
+**Usage**
+
+```js copy
+matrixAddition([[2, 4, 3],[5, 7, 8],[9, 6, 7]], [[3, 5, 7],[8, 3, 4],[5, 7, 8]]); // Returns [[5, 9, 10], [13, 10, 12], [14, 13, 15]]
+```
+
+**Returns**
+
+Addition of two matrices.
+
+## Matrix Subtraction
+
+Subtracts second matrix from first and will return the result. The order of both matrices must be same for subtraction.
+
+**Usage**
+
+```js copy
+matrixSubtraction([[2, 4, 3],[5, 7, 8],[9, 6, 7]], [[3, 5, 7],[8, 3, 4],[5, 7, 8]]); // Returns [[-1, -1, -4],[-3, 4, 4],[4, -1, -1]]
+```
+
+**Returns**
+
+Subtraction of two matrices.
+
+## Matrix Multiplication
+
+Multiplies both matrices and will return the result. Number of columns in first matrix should be same as number of rows in second matrix.
+
+**Usage**
+
+```js copy
+matrixMultiplication([[1, 2, 3],[4, 5, 6]], [[7, 8],[9, 10],[11, 12]]); // Returns [[58, 64],[139, 154]]
+```
+
+**Returns**
+
+Multiplication of two matrices.

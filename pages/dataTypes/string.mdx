@@ -1,0 +1,94 @@
+# String
+
+Following operations are supported on `string` data type.
+
+## Reverse String
+
+Reverses the given string.
+
+**Usage**
+
+```js copy
+reverseString("JavaScript"); // Returns `tpircSavaJ`
+reverseString("Gravitational Force"); // Returns `ecroF lanoitativarG`
+```
+
+**Returns**
+
+Returns the reversed string.
+
+## Palindrome String
+
+Checks if the given string is palindrome or not.
+
+**Usage**
+
+```js copy
+isStringPalindrome("racecar"); // Returns `true`
+```
+
+**Returns**
+
+Returns `true` is the given string is palindrome, otherwise `false`.
+
+## Get Words
+
+A list of words in the given sentence. It will ignore spaces, special characters in the sentence.
+
+**Usage**
+
+```js copy
+getWords("Lorem ipsum dolor sit amet, consectetur adipiscing elit"); // Returns ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit"]
+```
+
+**Returns**
+
+Returns the list of all the words in the given sentence.
+
+## String Count
+
+Returns the count of substring occurrence in the given string. This will not include the overlapped substring match. Also, the occurrence match is case-sensitive.
+
+**Usage**
+
+```js copy
+stringCount("This is it.", "is"); // Returns 2
+stringCount("Teamwork", "I"); // Returns 0
+```
+
+**Arguments**
+
+- `string`: The string from which substring occurrence needs to be matched.
+- `substring`: The substring whose occurrence count need to find out.
+
+**Returns**
+
+The occurrence count of `substring` in the `string`;
+
+## Capitalize
+
+This makes the first letter of the string in the uppercase and rest of the string in the lowercase.
+
+**Usage**
+
+```js copy
+capitalize("pizza with cheese toppings in the Venice, Italy."); // Returns `Pizza with cheese toppings in the venice, italy.`
+```
+
+**Returns**
+
+The capitalized string.
+
+## Title Case
+
+This makes the first letter of each word in the string or the sentence in the uppercase.
+
+**Usage**
+
+```js copy
+titleCase("pizza with cheese toppings in the Venice, Italy."); // Returns `Pizza With Cheese Toppings In The Venice, Italy.`
+```
+
+**Returns**
+
+The string in the title case.

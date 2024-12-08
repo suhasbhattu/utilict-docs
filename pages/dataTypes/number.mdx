@@ -1,0 +1,129 @@
+# Number
+
+Following operations are supported on `number` data type.
+
+## Reverse Number
+
+Returns the reverse of the given number.
+
+**Usage**
+
+```js copy
+reverseNumber(3245); // Returns 5423
+```
+
+**Returns**
+
+Returns the reverseof the number.
+
+## Prime Number
+
+Checks if the given number is prime or not.
+
+**Usage**
+
+```js copy
+isPrime(23); // Returns `true`
+```
+
+**Returns**
+
+Returns `true` is the given number is prime, otherwise `false`.
+
+## Palindrome Number
+
+Checks if the given number is palindrome or not.
+
+**Usage**
+
+```js copy
+isNumberPalindrome(23632); // Returns `true`
+```
+
+**Returns**
+
+Returns `true` is the given number is palindrome, otherwise `false`.
+
+## Factorial
+
+Returns the factorial (n!) of the given number.
+
+**Usage**
+
+```js copy
+factorial(5); // Returns 120
+```
+
+**Returns**
+
+Returns the factorial of the given number.
+
+## Permutations
+
+Returns the possible number of arrangements (`nPk`) can be formed from selecting `k` items from a set of `n` items. The order of the arrangement matters here.
+
+`k` value must be smaller or equal to the `n`.
+
+**Usage**
+
+```js copy
+permutations(5, 4); // i.e. 5P4 Checks the number of ways 4 items can be arranged out of 5, will return result as 120.
+```
+
+**Arguments**
+
+- `n`: Number of items in a set.
+- `k`: Number of items arranged from `n`.
+
+**Returns**
+
+Returns the number of ways to arrange 4 items out of 5.
+
+## Combinations
+
+Returns the possible number of ways (`nCk`) of selecting `k` items from a set of `n` items. The order of the arrangement doesn't matter here.
+
+`k` value must be smaller or equal to the `n`.
+
+**Usage**
+
+```js copy
+combinations(5, 4); // i.e. 5C4 Checks the number of ways 4 items can be selected out of 5, will return result as 5.
+```
+
+**Arguments**
+
+- `n`: Number of items in a set.
+- `k`: Number of items selected from `n`.
+
+**Returns**
+
+Returns the number of ways to select 4 items out of 5.
+
+## Change Base
+
+Changes the base of the given number or string to the other base. Supported bases are `decimal`, `binary`, `octal`, `hexadecimal`.
+
+**Usage**
+
+```js copy
+changeBase(12, "decimal", "binary"); // Returns `1100`
+changeBase(12, "decimal", "octal"); // Returns `14`
+changeBase(12, "decimal", "hexadecimal"); // Returns `c`
+
+changeBase("1111111111111111", "binary", "decimal"); // Returns 65535
+changeBase("1111111111111111", "binary", "octal"); // Returns `177777`
+changeBase("1111111111111111", "binary", "hexadecimal"); // Returns `ffff`
+
+changeBase("A1178", "hexadecimal", "octal"); // Returns `2410570`
+```
+
+**Arguments**
+
+- `number`: The number whose base needs to get converted. This number can be an integer decimal string or a string (binary/octal/hexadecimal).
+- `sourceBase`: The base of the given number. Allowed values are `decimal`, `binary`, `octal` and `hexadecimal`.
+- `targetBase`: The base into which the `number` gets converted. Allowed values are `decimal`, `binary`, `octal` and `hexadecimal`.
+
+**Returns**
+
+Returns the base converted number.
