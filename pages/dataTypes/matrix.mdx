@@ -1,0 +1,78 @@
+# Matrix
+
+Matrix is used in various operations in statistics and analytics. quarkle supports matrices with following operations.
+
+## Matrix Addition
+
+Adds two matrices and will return the result. The order of both matrices must be same for addition.
+
+**Usage**
+
+```js copy
+matrixAddition([[2, 4, 3],[5, 7, 8],[9, 6, 7]], [[3, 5, 7],[8, 3, 4],[5, 7, 8]]); // Returns [[5, 9, 10], [13, 10, 12], [14, 13, 15]]
+```
+
+**Returns**
+
+Addition of two matrices.
+
+## Matrix Subtraction
+
+Subtracts second matrix from first and will return the result. The order of both matrices must be same for subtraction.
+
+**Usage**
+
+```js copy
+matrixSubtraction([[2, 4, 3],[5, 7, 8],[9, 6, 7]], [[3, 5, 7],[8, 3, 4],[5, 7, 8]]); // Returns [[-1, -1, -4],[-3, 4, 4],[4, -1, -1]]
+```
+
+**Returns**
+
+Subtraction of two matrices.
+
+## Matrix Multiplication
+
+Multiplies both matrices and will return the result. Number of columns in first matrix should be same as number of rows in second matrix.
+
+**Usage**
+
+```js copy
+matrixMultiplication([[1, 2, 3],[4, 5, 6]], [[7, 8],[9, 10],[11, 12]]); // Returns [[58, 64],[139, 154]]
+```
+
+**Returns**
+
+Multiplication of two matrices.
+
+## Scalar Multiplication
+
+Multiply a scalar value with a given matrix and then returns a new matrix.
+
+**Usage**
+
+```js copy
+scalarMatrixMultiplication([[1, 6],[9, 3],[6, 0]],-2); // Multiplies -2 with a given matrix and returns [[-2, -12],[-18, -6],[-12, 0]]
+```
+
+**Arguments**
+
+- `matrix`: Matrix.
+- `scalar`: A sacalr value by which the given matrix is multiplied.
+
+**Returns**
+
+A new matrix with the scalar multiplication
+
+## Matrix Transpose
+
+Convert matrix rows into columns and columns into rows. Returns a new matrix as a result.
+
+**Usage**
+
+```js copy
+matrixTranspose([[0, 4],[7, 0],[3, 1]]); // Returns [[0, 7, 3],[4, 0, 1]]
+```
+
+**Returns**
+
+A new transposed matrix.
