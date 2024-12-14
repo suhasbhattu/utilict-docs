@@ -1,0 +1,31 @@
+# Stack
+
+Stack is the linear data structure which is able to perform operation in LIFO (Last In First Out) or FILO (First In Last Out) way. quarkle supports following methods on `Stack`:
+
+| Method | Description | Returns |
+| ------ | ----------- | ------- |
+| `push(item)` | Pushes a new item on the top of the stack. | `void` |
+| `pop()` | Pops out the item from the top of the stack. | Popped item |
+| `peek()` | Returns the top element in the stack. | Top item |
+| `isFull()` | Checks if the stack is full. | `true` if the stack is full, otherwise `false` |
+| `isEmpty()` | Checks if the stack is empty. | `true` if the stack is empty, otherwise `false` |
+| `length()` | Returns the total elements count in the stack. | Stack elements count |
+| `search(item)` | Searches for an item in the stack and returns its index. | If the element is present, it returns the index, otherwise `-1` |
+
+**Usage**
+
+```js copy
+const stack = new Stack();
+stack.push(34); // Pushes an item 34
+stack.peek(); // Returns the top element, 34.
+stack.length(); // Returns the element count, 1.
+stack.search(34); // Returns the search item index in the stack, 0;
+stack.pop(); // Pops the top element from the stack and returns it.
+
+// Stacks can also be declared with a size.
+const stackWithSize = new Stack(2); // This will create a stack with a size 2;
+stackWithSize.push(76); // Pushes an item 76
+stackWithSize.push(43); // Pushes an item 43
+stackWithSize.isFull(); // Returns "true"
+stackWithSize.push(37); // As the stack is full now, it will throw the "stack is full" error.
+```
