@@ -1,0 +1,36 @@
+# Queue
+
+Queue is the linear data structure which is able to perform operation in FIFO (First In First Out) way. quarkle supports following methods on `Queue`:
+
+| Method | Description | Returns |
+| ------ | ----------- | ------- |
+| `enqueue(item)` | Adds a new item in the rear of the queue. If the queue is full, it will throw an error. | `void` |
+| `dequeue()` | Removes the front item from the queue. If the queue is empty, it will throw an error. | Dequeued item |
+| `getFront()` | Returns the front element of the queue. | Front element |
+| `getRear()` | Returns the rear element of the queue. | Rear element |
+| `isFull()` | Checks if the queue is full. | `true` if the queue is full, otherwise `false` |
+| `isEmpty()` | Checks if the queue is empty. | `true` if the queue is empty, otherwise `false` |
+| `length()` | Returns the number of items in the queue. | Queue elements count |
+| `search(item)` | Searches for an item in the queue and returns its index. | If the element is present, it returns the index, otherwise `-1` |
+
+**Usage**
+
+```js copy
+const queue = new Queue();
+queue.enqueue(35); // Adds the value 35 from rear end of the queue.
+queue.enqueue(76); // Adds the value 76 from rear end of the queue.
+queue.length(); // Returns the element count, 2;
+queue.getFront(); // Returns the front item, 35.
+queue.getRear(); // Returns the rear item, 76.
+queue.dequeue(); // Removes element 35 from front end and returns it.
+queue.search(76); // Returns the position of the 76 is inserted in the queue, 1. 
+queue.dequeue(); // Removes element 76 from front end and returns it.
+queue.getFront(); // Returns an error "Queue is empty".
+
+// Queues can also be declared with a size.
+const queueWithSize = new Queue(2); // This will create a queue with a size 2;
+queueWithSize.enqueue(45); // Enqueue an item 45
+queueWithSize.enqueue(43); // Enqueue an item 43
+queueWithSize.isFull(); // Returns "true"
+queueWithSize.enqueue(37); // As the queue is full now, it will throw the "queue is full" error.
+```
