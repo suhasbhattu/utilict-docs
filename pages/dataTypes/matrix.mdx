@@ -9,7 +9,24 @@ Adds two matrices and will return the result. The order of both matrices must be
 **Usage**
 
 ```js copy
-matrixAddition([[2, 4, 3],[5, 7, 8],[9, 6, 7]], [[3, 5, 7],[8, 3, 4],[5, 7, 8]]); // Returns [[5, 9, 10], [13, 10, 12], [14, 13, 15]]
+matrixAddition(
+    [
+        [2, 4, 3],
+        [5, 7, 8],
+        [9, 6, 7]
+    ],
+    [
+        [3, 5, 7],
+        [8, 3, 4],
+        [5, 7, 8]
+    ]
+);
+// Returns
+// [
+//     [5, 9, 10],
+//     [13, 10, 12],
+//     [14, 13, 15]
+// ]
 ```
 
 **Returns**
@@ -23,7 +40,24 @@ Subtracts second matrix from first and will return the result. The order of both
 **Usage**
 
 ```js copy
-matrixSubtraction([[2, 4, 3],[5, 7, 8],[9, 6, 7]], [[3, 5, 7],[8, 3, 4],[5, 7, 8]]); // Returns [[-1, -1, -4],[-3, 4, 4],[4, -1, -1]]
+matrixSubtraction(
+    [
+        [2, 4, 3],
+        [5, 7, 8],
+        [9, 6, 7]
+    ], 
+    [
+        [3, 5, 7],
+        [8, 3, 4],
+        [5, 7, 8]
+    ]
+);
+// Returns
+// [
+//     [-1, -1, -4],
+//     [-3, 4, 4],
+//     [4, -1, -1]
+// ]
 ```
 
 **Returns**
@@ -37,7 +71,22 @@ Multiplies both matrices and will return the result. Number of columns in first 
 **Usage**
 
 ```js copy
-matrixMultiplication([[1, 2, 3],[4, 5, 6]], [[7, 8],[9, 10],[11, 12]]); // Returns [[58, 64],[139, 154]]
+matrixMultiplication(
+    [
+        [1, 2, 3],
+        [4, 5, 6]
+    ], 
+    [
+        [7, 8],
+        [9, 10],
+        [11, 12]
+    ]
+);
+// Returns 
+// [
+//     [58, 64],
+//     [139, 154]
+// ]
 ```
 
 **Returns**
@@ -51,7 +100,19 @@ Multiply a scalar value with a given matrix and then returns a new matrix.
 **Usage**
 
 ```js copy
-scalarMatrixMultiplication([[1, 6],[9, 3],[6, 0]],-2); // Multiplies -2 with a given matrix and returns [[-2, -12],[-18, -6],[-12, 0]]
+scalarMatrixMultiplication(
+    [
+        [1, 6],
+        [9, 3],
+        [6, 0]
+    ],
+-2);
+// Multiplies -2 with a given matrix and returns 
+// [
+//     [-2, -12],
+//     [-18, -6],
+//     [-12, 0]
+// ]
 ```
 
 **Arguments**
@@ -70,9 +131,107 @@ Convert matrix rows into columns and columns into rows. Returns a new matrix as 
 **Usage**
 
 ```js copy
-matrixTranspose([[0, 4],[7, 0],[3, 1]]); // Returns [[0, 7, 3],[4, 0, 1]]
+matrixTranspose(
+    [
+        [0, 4],
+        [7, 0],
+        [3, 1]
+    ]
+); 
+// Returns 
+//  [
+//     [0, 7, 3],
+//     [4, 0, 1]
+//  ]
 ```
 
 **Returns**
 
 A new transposed matrix.
+
+## Matrix Determinant
+
+Returns the determinant of the given matrix.
+
+**Usage**
+
+```js copy
+matrixDeterminant(
+    [
+        [1, 2, 1],
+        [0, 3, 4],
+        [3, 1, 4],
+    ]
+);
+// Returns 23
+```
+
+**Returns**
+
+The determinant of the given matrix.
+
+## Matrix Adjoint
+
+Returns the adjoint matrix of the given matrix.
+
+**Usage**
+
+```js copy
+matrixAdjoint(
+    [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+    ]
+);
+// Returns
+// [
+//     [-3, 6, -3],
+//     [6, -12, 6],
+//     [-3, 6, -3]
+// ]
+```
+
+**Returns**
+
+The adjoint of the given matrix.
+
+## Matrix Inverse
+
+Returns the invese of the given matrix. When matrix is multiplied with its reverse, it gives an identity matrix. If the matrix is singular, then it will throw an error.
+
+**Usage**
+
+```js copy
+matrixInverse(
+    [
+        [1, 2, 3],
+        [0, 1, 4],
+        [5, 6, 0],
+    ]
+);
+// Returns
+// [
+//     [-24, 18, 5],
+//     [20, -15, -4],
+//     [-5, 4, 1]
+// ]
+```
+
+**Returns**
+
+The inverse of the matrix. If matrix is not square matrix or is singular, it will throw an error.
+
+## Matrix Flatten
+
+Flatten the multidimensional matrix into 1-D array. It calculates deeply nested arrays recursively for flattening.
+
+**Usage**
+
+```js copy
+matrixFlatten([0, 1, [2, [3, [4, 5]]]]); // Returns [0, 1, 2, 3, 4, 5]
+```
+
+**Returns**
+
+The flattened 1-D array with all the elements.
