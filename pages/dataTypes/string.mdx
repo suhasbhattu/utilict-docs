@@ -92,3 +92,39 @@ titleCase("pizza with cheese toppings in the Venice, Italy."); // Returns `Pizza
 **Returns**
 
 The string in the title case.
+
+## String Sort
+
+This will sort all characters from the string and returns a sorted string. Default sort order is `ascending`.
+
+**Usage**
+
+```js copy
+sortString("mississippi"); //Returns `iiiimppssss`.
+sortString("structure", true); // Returns `uuttsrrec`.
+```
+
+**Arguments**
+
+- `string`: The string.
+- `descending`* (optional)*: The sort order, default value is `false`.
+
+**Returns**
+
+The sorted string.
+
+## String Anagrams
+
+This will check if given two strings are anagrams, returns `true` if they are anagrams, otherwise `false`.
+
+**Usage**
+
+```js copy
+areStringsAnagram("heart", "earth"); // Returns `true`.
+areStringsAnagram("state", "taste"); // Returns `true`.
+areStringsAnagram("steel", "still"); // Returns `false`.
+```
+
+**Returns**
+
+`true` if both the given strings are anagrams, otherwise `false`.
