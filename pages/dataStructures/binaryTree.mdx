@@ -1,0 +1,47 @@
+# Binary Tree
+
+Binary Tree is an essential data structure for computer science. `utilict` provides all necessary methods to perform operations on the binary tree.
+
+| Method                    | Description                                                                                                                                                                                                                      | Returns                                        |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| `getRoot()`               | Gets the root of the tree.                                                                                                                                                                                                       | Root node of the tree.                         |
+| `setRoot(value)`          | Sets the given value to the root node.                                                                                                                                                                                           | void                                           |
+| `insertNode(value, path)` | Inserts the value to the given path starting from the root. If the path is an empty string, then it will insert value as a root. Path should be in the form of `L` and `R`. Any characters other than these will throw an error. | Root of the tree                               |
+| `inorder()`               | Performs the inorder traversal on the tree.                                                                                                                                                                                      | List of all node values in inorder manner.     |
+| `preorder()`              | Performs the preorder traversal on the tree.                                                                                                                                                                                     | List of all node values in preorder manner.    |
+| `postorder()`             | Performs the postorder traversal on the tree.                                                                                                                                                                                    | List of all node values in postorder manner.   |
+| `levelOrder()`            | Performs the level order traversal (breadth first search) on the tree.                                                                                                                                                           | List of all node values in level order manner. |
+| `height()`                | Calculates the height of the tree. Height is the number of edges in the tree from root to the deepest node.                                                                                                                      | Height of the tree                             |
+| `nodeHeight()`            | Calculates the height of the given node.                                                                                                                                                                                         | Height of the node                             |
+| `invert()`                | Constructs the invert (mirror image) of the given tree.                                                                                                                                                                          | The root of the inverted tree                  |
+| `updateNode(value, path)` | Updates the node value of a given path. If the path is an empty string, then it will update the root node value. Path should be in the form of `L` and `R`. Any characters other than these will throw an error.                 | Root of the tree                               |
+| `deleteNode(path)`        | Deletes the node of a given path. This will delete node and also its children. Path should be in the form of `L` and `R`. Any characters other than these will throw an error.                                                   | Root of the tree                               |
+
+**Usage**
+
+```js copy
+const tree = new BinaryTree(5); // Constructs a tree with 5 as a root node value.
+tree.insertNode(3, "L"); // Inserts a node with value 3 on left of root.
+tree.insertNode(9, "R"); // Inserts a node with value 9 on right of root.
+tree.insertNode(5, "LR"); // Inserts a node with value 5 on right of 3.
+tree.insertNode(7, "RL"); // Inserts a node with value 7 on left of 9.
+tree.insertNode(6, "RLL"); // Inserts a node with value 6 on left on 7.
+tree.insertNode(8, "RLR"); // Inserts a node with value 8 on right on 7.
+tree.insertNode(12, "RR"); // Inserts a node with value 12 on right on 9.
+tree.insertNode(20, "RRR"); // Inserts a node with value 20 on right on 12.
+tree.inorder(); // Should return [3, 5, 5, 6, 7, 8, 9, 12, 20].
+tree.preorder(); // Should return [5, 3, 5, 9, 7, 6, 8, 12, 20].
+tree.postorder(); // Should return [5, 3, 6, 8, 7, 20, 12, 9, 5].
+tree.levelOrder(); // Should return [5, 3, 9, 5, 7, 12, 6, 8, 20].
+tree.height(); // Should return 4.
+tree.updateNode(13, ""); // Should update root node with value 13.
+tree.preorder(); // Should return [13, 3, 5, 9, 7, 6, 8, 12, 20].
+tree.updateNode(31, "RLR"); // Updates the node with value 8 with 31.
+tree.preorder(); // Should return [13, 3, 5, 9, 7, 6, 31, 12, 20].
+tree.deleteNode("RR"); // Should delete the node 12.
+tree.inorder(); // Should return [3, 5, 13, 6, 7, 31, 9].
+tree.deleteNode("RLL"); // Should delete the node 6.
+tree.inorder(); // Should return [3, 5, 13, 7, 31, 9].
+tree.invert(); // Construct the invert (mirror) of the tree.
+tree.inorder(); // Shoud return [9, 31, 7, 13, 5, 3].
+```
