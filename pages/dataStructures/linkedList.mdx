@@ -1,0 +1,46 @@
+# Linked List
+
+Linked List is the data structure having dynamic memory allocation allowss accessing data in a sequential way. `utilict` supports node value as `number` and `string` data types.
+
+| Method | Description | Returns |
+| ------ | ----------- | ------- |
+| `constructFromArray(list)` | Constructs a linked list from the given list of items. Only `number` and `string` types are supported. | The `head` of the linked list. |
+| `reverse()` | Reverse the given linked list. | `head` of the reversed linked list. |
+| `length()` | Returns the items count in the list. | Length of the linked list. |
+| `addFirst(value)` | Add the new node with the given value at the start of the linked list. | The `head` of the linked list. |
+| `addLast()` | Add the new node with the given value at the end of the linked list. | The `head` of the linked list. |
+| `add(value, index)` | Add the new node with the given value at the given index of the linked list. If the index is not provided or exceeds the length of the linked list, it will add it to the last. | The `head` of the linked list. |
+| `removeFirst()` | Removes the first node of the linked list. | The `head` of the linked list. |
+| `removeLast()` | Removes the last node of the linked list. | The `head` of the linked list. |
+| `remove(index)` | Removes the node of the given index of the linked list. If the index is not provided, it will remove the first node. | The `head` of the linked list. |
+| `getValue(index)` | Gets the value of the node of the given index. | The value of the node. |
+| `update(newValue, index)` | Updates the node of the given index with the `newValue`. | The `head` of the linked list. |
+| `getMiddleNode()` | Returns the middle node of a given list. If linked list has even node count, it will return a node having index (length / 2) + 1. | The middle node of the list. |
+| `getMiddleValue()` | Returns the value of the middle node of a given list. If linked list has even node count, it will return a node having index (length / 2) + 1. | The value of the middle node of the list. |
+| `rotateRight(position)` | Rotates the linked list to the right by given position. If position is negative, then it will rotate it towards left by given position. | The `head` of the linked list. |
+| `rotateLeft(position)` | Rotates the linked list to the left by given position. If position is negative, then it will rotate it towards right by given position. | The `head` of the linked list. |
+| `concat(list)` | Concatenates second linked list into first one and return the first linked list. | The `head` of the first Linked List with merged list. |
+| `print()` | Logs the value of the each node of the linked list separated by `->`. | The linked list values. |
+
+**Usage**
+
+```js copy
+const linkedList = new LinkedList([123, 432, 54, 67]); // Creates a linked list using the given list.
+linkedList.add(96); // Adds 96 to the end of the list. The list should be 123 -> 432 -> 54 -> 67 -> 96.
+linkedList.addFirst(52); // Adds 52 to the first of the list. The list should be 52 -> 123 -> 432 -> 54 -> 67 -> 96.
+linkedList.reverse(); // Reverses the list. The list should be 96 -> 67 -> 54 -> 432 -> 123 -> 52.
+linkedList.add(28, 2); // Adds 28 at the second position of the list. The list should be 96 -> 67 -> 28 -> 54 -> 432 -> 123 -> 52.
+linkedList.length(); // The node count in the linked list. Returns 7.
+linkedList.remove(3); // Removes node with index 3 from the linked list. The list should be 96 -> 67 -> 28 -> 432 -> 123 -> 52.
+linkedList.removeLast(); // Removes last node from the linked list. The list should be 96 -> 67 -> 28 -> 432 -> 123.
+linkedList.removeFirst(); // Removes the first node from the linked list. The list should be 67 -> 28 -> 432 -> 123.
+linkedList.getValue(2); // Returns the node value of index 2 in the list. Returns 432.
+linkedList.update(95, 2); // Updates the node value of index 2 with 95. The list should be 67 -> 28 -> 95 -> 123.
+linkedList.update(16, 0); // Updates the node value of index 0 with 16. The list should be 16 -> 28 -> 95 -> 123.
+linkedList.getMiddleNode(); // Returns the middle node of the list. Returns 95.
+linkedList.rotateLeft(1); // Rotates the list on the left by 1 position. The list should be 28 -> 95 -> 123 -> 16.
+linkedList.rotateLeft(-1); // As the position is negative, it will rotate to the right by 1 positon. The list should be 16 -> 28 -> 95 -> 123.
+linkedList.rotateRight(1); // Rotates the list on the right by 1 position. The list should be 123 -> 16 -> 28 -> 95.
+linkedList.rotateRight(-1); // As the position is negative, it will rotate to the left by 1 positon. The list should be 16 -> 28 -> 95 -> 123.
+linkedList.concat(new LinkedList([34, 65, 78])); // COncatenates the given list with another one. The result should be 16 -> 28 -> 95 -> 123 -> 34 -> 65 -> 78.
+```
