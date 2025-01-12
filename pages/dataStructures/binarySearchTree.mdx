@@ -1,0 +1,39 @@
+# Binary Search Tree
+
+Binary Search Tree is an essential data structure for computer science for storing data in a sorted manner. The defining property of Binary Search Tree is that left child of a node has value smaller than the parent node and right child of a node has value greater than the parent node. `utilict` provides all necessary methods to perform operations on the binary tree.
+
+**Initialization**
+
+```js copy
+const tree = new BinarySearchTree([8, 3, 10, 6, 1, 4, 14, 7]); // This will create a binary search tree with node 8 as a root.
+const root = tree.getRoot(); // It will return the root of the tree.
+tree.insert(15); // It will insert node with value 15 in the tree.
+```
+
+**Methods**
+
+| Method                    | Description                                                                                                                                                                                                                      | Returns                                        |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| `getRoot()`               | Gets the root of the tree.                                                                                                                                                                                                       | Root node of the tree.                         |
+| `insert(value)`           | Inserts the node with the given value in the binary search tree.                                                                                                                                                                 | Inserted node of the tree                      |
+| `inorder()`               | Performs the inorder traversal on the tree.                                                                                                                                                                                      | List of all node values in inorder manner.     |
+| `preorder()`              | Performs the preorder traversal on the tree.                                                                                                                                                                                     | List of all node values in preorder manner.    |
+| `postorder()`             | Performs the postorder traversal on the tree.                                                                                                                                                                                    | List of all node values in postorder manner.   |
+| `levelOrder()`            | Performs the level order traversal (breadth first search) on the tree.                                                                                                                                                           | List of all node values in level order manner. |
+| `height()`                | Calculates the height of the tree. Height is the number of edges in the tree from root to the deepest node.                                                                                                                      | Height of the tree                             |
+| `nodeHeight()`            | Calculates the height of the given node.                                                                                                                                                                                         | Height of the node                             |
+
+**Usage**
+
+```js copy
+const tree = new BinarySearchTree([8, 3, 10, 6, 1, 4, 14, 7]); // Constructs a tree with 8 as a root node value.
+tree.inorder(); // Should return [1, 3, 4, 6, 7, 8, 10, 14].
+tree.preorder(); // Should return [8, 3, 1, 6, 4, 7, 10, 14].
+tree.postorder(); // Should return [1, 4, 7, 6, 3, 14, 10, 8].
+tree.insert(13); // Insert 13 in the tree.
+tree.inorder(); // Should return [1, 3, 4, 6, 7, 8, 10, 13, 14].
+tree.preorder(); // Should return [8, 3, 1, 6, 4, 7, 10, 14, 13].
+tree.postorder(); // Should return [1, 4, 7, 6, 3, 13, 14, 10, 8].
+tree.levelOrder(); // Should return [8, 3, 10, 1, 6, 14, 4, 7, 13].
+tree.height(); // Should return 4.
+```
