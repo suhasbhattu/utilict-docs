@@ -58,6 +58,22 @@ arrayProduct([90, 87, 0, -34, -900, -1245]); // Returns 0
 
 Returns the product of all the numbers in the array.
 
+## Array Difference
+
+Finds elements from first list which are not in second list and returns it.
+
+**Usage**
+
+```js copy
+arrayDifference([1, 2, 2, 4, 3], [2, 4]); // Returns [1, 2, 3]
+arrayDifference(["John", "Paul", "George", "Ringo"], ["John", "George"]); // Returns ["Paul", "Ringo"]
+```
+
+**Arguments**
+
+- `list1`: First list.
+- `list2`: Second list which will get subtracted from `list1`.
+
 ## Mean
 
 Returns the mean of the given array. utilict supports 4 types of mean, `arithmetic`, `geometric`, `harmonic`, `rms`. The default value is `arithmetic`.
