@@ -1,0 +1,39 @@
+# Complex Number
+
+Complex numbers are type of a number system consists of `real` and `imaginary` part. Imaginary parts are denoted by `i` represents the value sqaure root of -1. Complex numbers are mathemeatically denoted as `a + bi` where `a` is the real part and `b` is imaginary. `utilict` can perform basic number operations on the complex numbers.
+
+**Initialization**
+
+```js copy
+const complex = new ComplexNumber(2, 3); // This will form a complex number (2 + 3i), 2 is the real and 3 is imaginary.
+```
+
+**Methods**
+
+| Method | Description |
+| ------ | ----------- |
+| `getReal()` and `setReal(number)` | Gets the real value and sets the real value to the complex number. |
+| `getImag()` and `setImag(number)` | Gets the imaginary value and sets the imaginary value to the complex number. |
+| `add(anotherComplexNumber)` | Adds the another complex number to this one and set the real and imaginary part to this |
+| `subtract(anotherComplexNumber)` | Subtracts the another complex number from this one and set the real and imaginary part to this |
+| `multiply(anotherComplexNumber)` | Multiplies the another complex number to this one and set the real and imaginary part to this |
+| `divide(anotherComplexNumber)` | Divides the another complex number to this one and set the real and imaginary part to this |
+
+**Usage**
+
+```js copy
+const complex = new ComplexNumber(2, 3); // Creates a complex number 2 + 3i.
+complex.add(new ComplexNumber(1, 7)); // Adds a new complex number 1 + 7i to the 2 + 3i, complex will be 3 + 10i.
+complex.getReal(); // 3
+complex.getImag(); // 10
+complex.subtract(5, 6); // Subtracts a new complex number 5 + 6i from the 3 + 10i, complex will be -2 + 4i.
+
+const complex2 = new ComplexNumber(3, 2); // Creates a complex number 3 + 2i.
+complex2.multiply(new ComplexNumber(1, 7)); // Multiplies 1 + 7i to 3 + 2i, complex2 will be -11 + 23i.
+
+const complex3 = new ComplexNumber(1, 1); // Creates a complex number 1 + 1i.
+complex3.multiply(new ComplexNumber(1, 1)); // Multiplies 1 + 1i to 1 + 1i itself, complex3 will be 0 + 2i.
+
+const complex4 = new ComplexNumber(2, 3); // Creates a complex number 2 + 3i.
+complex4.divide(new ComplexNumber(4, -5)); // Divides 4 - 5i to 2 + 3i, complex4 will be -0.17073 + 0.53659i.
+```
