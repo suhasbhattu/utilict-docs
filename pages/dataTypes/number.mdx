@@ -127,3 +127,26 @@ changeBase("A1178", "hexadecimal", "octal"); // Returns `2410570`
 **Returns**
 
 Returns the base converted number.
+
+## Calculate Distance
+
+Calculates the distance between given two coordinates.
+
+**Usage**
+
+```js copy
+distance(2, 2, 2, 5); // Calculates distance between [2, 2] and [2, 5], returns 3.
+distance(1, 1, 2, 2); // Calculates distance between [1, 1] and [2, 2], returns 1.4142135623730951.
+distance(-2, 2, 5, -7); // Calculates distance between [-2, 2] and [5, -7], returns 11.40175425099138.
+```
+
+**Arguments**
+
+- `x1`: x cordinate of the first point.
+- `y1`: y cordinate of the first point.
+- `x2`: x cordinate of the second point.
+- `y2`: y cordinate of the second point.
+
+**Returns**
+
+The distance between two points.
